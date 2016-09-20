@@ -1,0 +1,25 @@
+@mixin bg($img,$x:100%,$y:100%){
+	background-repeat: no-repeat;
+	background-image: url('../images/#{$img}');
+	background-size: $x $y;
+}
+
+.mt20{
+	margin-top: 0.2rem;
+}
+
+.flex{
+	display: flex;
+	box-align: center;
+	align-items: center;
+	.flex-child{
+		display: block;
+		flex: 1;
+	} 
+}
+
+.flex2{
+	@extend .flex;
+	box-orient: vertical;
+	flex-direction: column;
+}
